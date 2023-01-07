@@ -1,0 +1,41 @@
+@use '../util' as *;
+
+.header {
+	padding-top: rem(36);
+	padding-bottom: rem(100);
+	margin-bottom: rem(-100);
+	background-color: var(--header-bg);
+
+	&__heading {
+		padding-bottom: rem(25);
+		margin-bottom: rem(15);
+		border-bottom: rem(1) solid var(--secondary-fc);
+	}
+
+	&__title {
+		margin-bottom: rem(5);
+	}
+
+	&__subtitle {
+		font-size: rem(14);
+		font-weight: 700;
+		color: var(--secondary-fc);
+	}
+
+	&__toggle {
+	}
+
+	@include breakpoint(medium) {
+		&__wrapper {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		&__heading {
+			border: none;
+			padding-bottom: 0;
+			margin-bottom: 0;
+		}
+	}
+}
